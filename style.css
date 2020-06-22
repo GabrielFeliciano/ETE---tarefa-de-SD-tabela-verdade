@@ -1,0 +1,57 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+button {
+    background-color: darkseagreen;
+    padding: 1rem;
+    font-style: italic;
+}
+
+.binary-table-container {
+    border: crimson solid .2rem;
+    background-color: bisque;
+}
+
+table {
+    background-color: bisque;
+    text-align: center;
+    width: 30rem;
+    font-size: 3em;
+}
+
+thead {
+    background-color: coral;
+}
+
+input {
+    width: 5rem;
+    height: 2em;
+    text-align: center;
+    font-size: .4em;
+}
+
+th {
+    padding: 1rem;
+}
+
+td {
+    padding: .2rem .1rem;
+    border: firebrick solid .1rem;
+}
+
+th, td {
+    width: 33%;
+}
