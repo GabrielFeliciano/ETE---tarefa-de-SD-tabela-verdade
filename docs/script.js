@@ -1,29 +1,49 @@
+window.onload = function () {
+    [...document.querySelectorAll(".bin-option")].forEach(binOption => {
+        binOption.onclick = () => {
+            return (binOption.innerText == '1') ? binOption.innerText = '0' : binOption.innerText = '1';
+        }
+    });
+}
+
 const rightSolution = [0, 0, 0, 1].map(val => val.toString());
 
 function compareLists (list1, list2) {
     for (let index in list1) {
         if (list1[index] !== list2[index]) {
-            return false
+            return false;
         }
     }
     return true;
 }
 
 document.querySelector('#try-table').onclick = () => {
-    const inputsFromTable = [...document.querySelectorAll('#binary-table input')];
+    // function validate () {
+    //     for (i = 0; i < binOptions.length; i += 2) {
+    //         if (!(binOptions[i].innerHTML * binOptions[i+1].innerHTML)) {
+    //             return false;
+    //         }
+    //         return true;
+    //     }
+    // }
+
+    // const binOptions = [...document.querySelectorAll(".bin-option")];
+    // if (validate()) {
+    //     console.log('noce');
+    // } else {
+    //     console.log('oof');
+    // }
+    
+    const inputsFromTable = [...document.querySelectorAll('.bin-option')];
     const solutionByUser = [];
     for (let inputFromTable of inputsFromTable) {
-        solutionByUser.push(inputFromTable.value);
+        solutionByUser.push(inputFromTable.innerHTML);
     }
-    console.log(solutionByUser)
-    if (solutionByUser.every(val => (val == '1' || val == '0')) && solutionByUser.length == 4) {
-        if (compareLists(rightSolution, solutionByUser)) {
-            console.log('Você acertou!');
-        } else {
-            console.log('Você errou!');
-        }
+    console.log(solutionByUser);
+    if (compareLists(rightSolution, solutionByUser)) {
+        console.log('Você acertou!');
     } else {
-        console.log('Valores Inválido')
+        console.log('Você errou!');
     }
     return null;
 }
