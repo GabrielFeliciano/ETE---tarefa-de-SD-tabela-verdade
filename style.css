@@ -18,6 +18,11 @@ button {
     background-color: darkseagreen;
     padding: 1rem;
     font-style: italic;
+    transition: 1s ease-out background-color;
+}
+
+button:hover {
+    background-color: green;
 }
 
 .binary-table-container {
