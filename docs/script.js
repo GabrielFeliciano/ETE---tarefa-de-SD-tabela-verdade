@@ -1,3 +1,6 @@
+const rightSolution = [0, 0, 0, 1].map(val => val.toString());
+const result = document.querySelector('#result');
+
 window.onload = function () {
     [...document.querySelectorAll(".bin-option")].forEach(binOption => {
         binOption.onclick = () => {
@@ -9,13 +12,10 @@ window.onload = function () {
     }
 }
 
-const rightSolution = [0, 0, 0, 1].map(val => val.toString());
-
 function resultAnimate () {
     [...document.querySelectorAll('h1, p:not(#result)')].forEach(elem => {
         elem.style.display = 'none'
     });
-    const result = document.querySelector('#result');
     result.style.animation = 'result-animate 1s ease-out .2s 1 forwards';
 }
 
@@ -38,10 +38,10 @@ document.querySelector('#try-table').onclick = () => {
 
     if (compareLists(rightSolution, solutionByUser)) {
         console.log('Você acertou!');
-        document.querySelector('#result').innerText = "Você acertou 😁";
+        result.innerText = "Você acertou 😁";
     } else {
         console.log('Você errou!');
-        document.querySelector('#result').innerText = "Você errou! 😒";
+        result.innerText = "Você errou! 😒";
     }
 
     resultAnimate ();
