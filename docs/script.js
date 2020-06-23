@@ -1,4 +1,4 @@
-const rightSolution = [0, 0, 0, 1].map(val => val.toString());
+const rightSolution = ['0', '0', '0', '1'];
 const result = document.querySelector('#result');
 
 window.onload = function () {
