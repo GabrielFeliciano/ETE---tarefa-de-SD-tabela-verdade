@@ -25,6 +25,17 @@ button:hover {
     background-color: green;
 }
 
+h1 {
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
 .binary-table-container {
     border: crimson solid .2rem;
     background-color: bisque;
@@ -77,8 +88,20 @@ th, td {
     background-color: grey;
 }
 
+#result {
+    font-size: 3em;
+}
+
 @keyframes background-bin-option {
     to {
         background-color: lightslategray;
+    }
+}
+
+@keyframes result-animate {
+    from {
+        transform: scale(.7);
+    } to {
+        transform: scale(1);
     }
 }
