@@ -20,10 +20,10 @@ window.onload = function () {
 }
 
 function resultAnimate () {
+    result.style.animation = 'result-animate 1s ease-out 1 forwards';
     [...document.querySelectorAll('h1, p:not(#result)')].forEach(elem => {
         elem.style.display = 'none'
     });
-    result.style.animation = 'result-animate 1s ease-out .2s 1 forwards';
 }
 
 function compareLists (list1, list2) {
