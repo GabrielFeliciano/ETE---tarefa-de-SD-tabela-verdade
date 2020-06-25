@@ -80,7 +80,7 @@ th, td {
 }
 
 .bin-option {
-    animation: background-bin-option 1s ease-in-out 10 alternate;
+    animation: background-bin-option 1s ease-in-out infinite alternate;
 }
 
 .bin-option:hover {

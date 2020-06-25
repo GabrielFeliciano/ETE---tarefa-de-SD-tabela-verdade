@@ -1,12 +1,19 @@
 const rightSolution = ['0', '0', '0', '1'];
 const result = document.querySelector('#result');
+const binOptions = [...document.querySelectorAll('.bin-option')];
 
+// Quando a página começar ...
 window.onload = function () {
-    [...document.querySelectorAll(".bin-option")].forEach(binOption => {
+
+    binOptions.forEach(binOption => {
         binOption.onclick = () => {
-            return (binOption.innerText == '1') ? binOption.innerText = '0' : binOption.innerText = '1';
+            (binOption.innerText == '1') ? binOption.innerText = '0' : binOption.innerText = '1';
+            for (let binOption of binOptions) {
+                binOption.style.animation = 'unset'
+            }
         }
     });
+
     document.querySelector('#result').onanimationend = () => {
         result.style.animation = 'none';
     }
