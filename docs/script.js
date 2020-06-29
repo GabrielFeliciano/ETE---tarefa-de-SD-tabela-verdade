@@ -8,10 +8,8 @@ window.onload = function () {
     binOptions.forEach(binOption => {
         binOption.onclick = () => {
             (binOption.innerText == '1') ? binOption.innerText = '0' : binOption.innerText = '1';
-            for (let binOption of binOptions) {
-                binOption.style.animation = 'unset'
-            }
         }
+        binOption.style.animation = 'unset';
     });
 
     document.querySelector('#result').onanimationend = () => {
